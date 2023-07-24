@@ -16,7 +16,11 @@
 }
 .link{
     color: black;
-    text-decoration: underline;
-    
-    
+    text-decoration: underline;  
 }
+.main-nav{
+    position: fixed;
+    bottom: 150px;
+    left: 10px;
+}
+
