@@ -1,0 +1,16 @@
+table{
+    border: 1px solid black;
+   margin: auto;
+    width: 800px;
+    height: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    background-color: lightcyan;
+    background-size: cover;
+}
+tr, td, th{
+    border: 1px solid black;   
+    text-align: center;
+}
+
+
