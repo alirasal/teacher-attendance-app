@@ -65,22 +65,13 @@ const StudentList = () => {
   };
 
   const handleSaveAttendance = async () => {
-    if (!selectedSubject || !selectedDate || !selectedTime) {
-      alert("Please select a subject, date, and time before saving attendance.");
+    if (!selectedDate) {
+      alert("Please select a date before saving attendance.");
       return;
     }
   
     try {
-      // Create a new collection for each subject if it doesn't exist
-      const subjectsRef = collection(firestore, "subjects");
-      const subjectDocRef = doc(subjectsRef, selectedSubject);
-      const subjectDoc = await getDoc(subjectDocRef);
-  
-      if (!subjectDoc.exists()) {
-        await addDoc(subjectsRef, { subjectName: selectedSubject });
-      }
-  
-      // Now, save the attendance for each student under the corresponding subject collection
+      // Now, save the attendance for each student
       await Promise.all(
         students.map(async (student) => {
           const studentsRef = collection(firestore, "students");
@@ -96,7 +87,6 @@ const StudentList = () => {
             await updateDoc(studentRef, {
               attendance: arrayUnion({
                 date: selectedDate,
-                time: selectedTime,
                 status: student.attendance,
               }),
             });
@@ -113,6 +103,7 @@ const StudentList = () => {
       alert("Error saving attendance. Please try again later.");
     }
   };
+  
   
 
   const handleEmailAbsentStudents = () => {
