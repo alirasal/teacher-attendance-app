@@ -1,5 +1,10 @@
+.navContainer{
+    position: fixed;
+    bottom: 150px;
+    left:10px;
+    margin-bottom: 28px;
+}
 .nav{
-    bottom: 0%;
     
     width: 100%;
     height: 70px;
