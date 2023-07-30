@@ -2,8 +2,6 @@ import React from 'react'
 import './Nav.css'
 import { useNavigate } from 'react-router-dom'
 
-
-
 function Nav() {
   const navigate = useNavigate()
 
@@ -26,7 +24,7 @@ function Nav() {
 
 
   return (
-    <div className='navContainer'>
+    <div className='main-nav'>
      <div className='nav'>
         <nav className='nav-links'>
           <div>
@@ -46,14 +44,10 @@ function Nav() {
               <a onClick={studentDetailsnav}>Student Details</a>
             </h4>
             </div>
-            </div>
-            
-
-         
+            </div>        
         </nav>
       </div>
     </div>
   )
 }
-
 export default Nav
