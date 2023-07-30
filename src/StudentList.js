@@ -191,33 +191,11 @@ const StudentList = () => {
             ))}
           </select>
         </label>
-
-        <label>
-          Select Subject:
-          <select defaultValue="" onChange={(e) => setSelectedSubject(e.target.value)}>
-            <option value="">Select Subject</option>
-            {subjects.map((subject) => (
-              <option key={subject} value={subject}>
-                {subject}
-              </option>
-            ))}
-          </select>
-        </label>
         <label>
           Select Date:
           <input type="date" value={selectedDate} onChange={handleDateChange} />
         </label>
-        <label>
-          Select Time:
-          <select value={selectedTime} onChange={handleTimeChange}>
-            <option value="">Select Time</option>
-            {times.map((time) => (
-              <option key={time} value={time}>
-                {time}
-              </option>
-            ))}
-          </select>
-        </label>
+        
         <button onClick={handleSaveAttendance}>Save</button>
         <button onClick={handleEmailAbsentStudents}>Send Absent Emails</button>
       </div>
