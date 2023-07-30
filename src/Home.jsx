@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
        <Nav/>
-        <h1>Welcome to the Student Attendance App</h1>
+        <h1 className='main-head' >Welcome to the Student Attendance App</h1>
     </div>
   )
 }
